@@ -49,25 +49,28 @@
     		<h5>Please enter the following information to generate the best physical health plan for you!</h5></center>
     		<div>
   				<p>First Name:</p>
-  				<input type="text"  style="width:15%" margin-bottom="2%" placeholder="First Name"/>
-  				<p>Last Name:</p>
-  				<input type="text"  style="width:15%" margin-bottom="2%" placeholder="Last Name"/>
-  				<p>Age:</p>
-  				<input type="number"  style="width:15%" margin-bottom="2%" placeholder="Age"/>
-  				<p>Height(in inches):</p>
-  				<input type="text"  style="width:15%" margin-bottom="2%" placeholder="Height"/>
-  				<p>Weight(in lbs):</p>
-  				<input type="text"  style="width:15%" margin-bottom="2%" placeholder="Weight"/>
-  				<p>Gender:</p>
-  				<select>
+  				<input id="first" type="text"  style="width:15%" placeholder="First Name"/>
+  				<p style="margin-top:2%">Last Name:</p>
+  				<input id="last" type="text"  style="width:15%"  placeholder="Last Name"/>
+  				<p style="margin-top:2%">Age:</p>
+  				<input id="age" type="number"  style="width:15%"  placeholder="Age"/>
+  				<p style="margin-top:2%">Height(in inches):</p>
+  				<input id="height" type="text"  style="width:15%"  placeholder="Height"/>
+  				<p style="margin-top:2%">Weight(in lbs):</p>
+  				<input id="weight" type="text"  style="width:15%"  placeholder="Weight"/>
+  				<p style="margin-top:2%">Gender:</p>
+  				<select id="gender">
   					<option value="Male">Male</option>
   					<option value="Female">Female</option>
   				</select>
 
-  				<p>BMI:</p>
-  				<input type="text"  style="width:15%" margin-bottom="2%" placeholder="BMI"/>
+  				<p style="margin-top:2%">BMI:</p>
+  				<input id="bmi" type="text"  style="width:15%"  placeholder="BMI"/>
   				
-  				<a href=" http://www.nhlbi.nih.gov/guidelines/obesity/BMI/bmicalc.htm">Click here to calculate BMI</a>
+  				<a href=" http://www.nhlbi.nih.gov/guidelines/obesity/BMI/bmicalc.htm" target="_blank">Click here to calculate BMI</a>
+
+          <p style="margin-top:2%">How many hours a week can you commit to exercise?</p>
+          <input type="number" placeholder="hours"/>
 			</div>
 			<br/>
 			<input type="submit" class="btn btn-primary pull-left" value="Submit" />
@@ -78,11 +81,13 @@
 	<script>
 		function myFunction() {
     		var x = document.getElementById("myForm");
-    		console.log(x);
-    		var text = "";
-    		var i;
-    		for (i = 0; i < x.length ;i++) {
-        		text += x.elements[i].value + "<br>";
+    		var text1 = document.getElementById("first");
+    		var text2 = document.getElementById("last");
+    		var text3 = document.getElementById("age");
+    		var text4 = document.getElementById("height");
+    		var text5 = document.getElementById("weight");
+    		var text6 = document.getElementById("gender");
+    		var text7 = document.getElementById("bmi");
     	}
     	document.getElementById("demo").innerHTML = text;
 }
