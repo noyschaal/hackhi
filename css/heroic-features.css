@@ -30,6 +30,10 @@ body {
     color:#1d5b2d;
 }
 
+.navbar-brand:hover {
+    color: #5c9a1b;
+}
+
 .btn-custom {
 	background-color:#5c9a1b;
 	color: #ffffff;
