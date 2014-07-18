@@ -1,4 +1,0 @@
-hackhi
-======
-
-HackHI Project
