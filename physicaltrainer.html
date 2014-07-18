@@ -13,6 +13,7 @@
 
     <!-- Custom CSS for the 'Heroic Features' Template -->
     <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
@@ -44,61 +45,55 @@
     </nav>
     <hr/>
     <div class = "container">
-    	<form align="left" id="myForm">
-    		<center><h1>Physical Health Trainer</h1>
-    		<h5>Please enter the following information to generate the best physical health plan for you!</h5></center>
+        <center><h1>Physical Health Trainer</h1>
+        <h5>Please enter the following information to generate the best physical health plan for you!</h5></center>
+    	<form align="left" id="myForm" class="input-group" method="get" action="submitted.html">
+    		
     		<div>
   				<p>First Name:</p>
-  				<input id="first" type="text"  style="width:15%" placeholder="First Name"/>
-  				<p style="margin-top:2%">Last Name:</p>
-  				<input id="last" type="text"  style="width:15%"  placeholder="Last Name"/>
-  				<p style="margin-top:2%">Age:</p>
-  				<input id="age" type="number"  style="width:15%"  placeholder="Age"/>
-  				<p style="margin-top:2%">Height(in inches):</p>
-  				<input id="height" type="text"  style="width:15%"  placeholder="Height"/>
-  				<p style="margin-top:2%">Weight(in lbs):</p>
-  				<input id="weight" type="text"  style="width:15%"  placeholder="Weight"/>
-  				<p style="margin-top:2%">Gender:</p>
-  				<select id="gender">
+  				<input id="first" name="first" type="text" placeholder="First Name" required/>
+  				<p>Last Name:</p>
+  				<input id="last" name="last" type="text"  placeholder="Last Name" required/>
+  				<p>Age:</p>
+  				<input id="age" name="age" type="number" placeholder="Age" min = "15" max="150" step="any" required/>
+  				<p>Height(in inches):</p>
+  				<input id="height" name="height" type="number" placeholder="Height" required/>
+  				<p>Weight(in lbs):</p>
+  				<input id="weight" name="weight" type="number" placeholder="Weight" required/>
+          <br/>
+           <p>
+            Underweight = <18.5 <br/>
+            Normal Weight = 18.5 - 24.9<br/>
+            Overweight = 25 - 29.9<br/>
+            Obesity = BMI of 30 or greater
+          </p>
+          <span id = "bmi"></span>
+          <br/>
+          <button id="calculate" onclick="calcBMI(); return false">Calculate BMI</button>
+  				<p>Gender:</p>
+  				<select id="gender" name="gender" required>
   					<option value="Male">Male</option>
   					<option value="Female">Female</option>
   				</select>
-
-  				<p style="margin-top:2%">BMI:</p>
-  				<input id="bmi" type="text"  style="width:15%"  placeholder="BMI"/>
-  				
-  				<a href=" http://www.nhlbi.nih.gov/guidelines/obesity/BMI/bmicalc.htm" target="_blank">Click here to calculate BMI</a>
-
-          <p style="margin-top:2%">How many hours a week can you commit to exercise?</p>
-          <input type="number" placeholder="hours"/>
+          
+          <p>How many hours a week can you commit to exercise?</p>
+          <input id="hours" name="hours" type="number" placeholder="hours" required/>
 			</div>
+      <br/>
+      <input type="submit" id="save" onclick="return saveInfo()" value="Save"/>
+     
 			<br/>
-			<input type="submit" class="btn btn-primary pull-left" value="Submit" />
+
 		</form>
+
 	<hr/>
 	</div>
-
-	<script>
-		function myFunction() {
-    		var x = document.getElementById("myForm");
-    		var text1 = document.getElementById("first");
-    		var text2 = document.getElementById("last");
-    		var text3 = document.getElementById("age");
-    		var text4 = document.getElementById("height");
-    		var text5 = document.getElementById("weight");
-    		var text6 = document.getElementById("gender");
-    		var text7 = document.getElementById("bmi");
-    	}
-    	document.getElementById("demo").innerHTML = text;
-}
-</script>
-
 	<hr>
 
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Company 2013</p>
+                    <p>Copyright &copy; HealthyHi 2014</p>
                 </div>
             </div>
         </footer>
@@ -108,6 +103,6 @@
 
 
 
-
+    <script src="physicaltrainer.js"></script>
 </body>
 </html>    
