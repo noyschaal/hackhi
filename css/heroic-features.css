@@ -35,6 +35,11 @@ body {
 	color: #ffffff;
 }
 
+.btn-custom:hover {
+	background-color:#1d5b2d;
+	color: #ffffff;
+}
+
 footer {
 	margin: 50px 0;
 }
