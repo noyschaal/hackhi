@@ -14,7 +14,7 @@
     <!-- Custom CSS for the 'Heroic Features' Template -->
     <link href="css/heroic-features.css" rel="stylesheet">
 </head>
-
+<body>
 <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -30,7 +30,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a>
+                    <li><a href="heroic-features.html">Home</a>
                     </li>
                     <li><a href="#services">Services</a>
                     </li>
@@ -42,3 +42,67 @@
         </div>
         <!-- /.container -->
     </nav>
+    <hr/>
+    <div class = "container">
+    	<form align="left" id="myForm">
+    		<center><h1>Physical Health Trainer</h1>
+    		<h5>Please enter the following information to generate the best physical health plan for you!</h5></center>
+    		<div>
+  				<p>First Name:</p>
+  				<input type="text"  style="width:15%" margin-bottom="2%" placeholder="First Name"/>
+  				<p>Last Name:</p>
+  				<input type="text"  style="width:15%" margin-bottom="2%" placeholder="Last Name"/>
+  				<p>Age:</p>
+  				<input type="number"  style="width:15%" margin-bottom="2%" placeholder="Age"/>
+  				<p>Height(in inches):</p>
+  				<input type="text"  style="width:15%" margin-bottom="2%" placeholder="Height"/>
+  				<p>Weight(in lbs):</p>
+  				<input type="text"  style="width:15%" margin-bottom="2%" placeholder="Weight"/>
+  				<p>Gender:</p>
+  				<select>
+  					<option value="Male">Male</option>
+  					<option value="Female">Female</option>
+  				</select>
+
+  				<p>BMI:</p>
+  				<input type="text"  style="width:15%" margin-bottom="2%" placeholder="BMI"/>
+  				
+  				<a href=" http://www.nhlbi.nih.gov/guidelines/obesity/BMI/bmicalc.htm">Click here to calculate BMI</a>
+			</div>
+			<br/>
+			<input type="submit" class="btn btn-primary pull-left" value="Submit" />
+		</form>
+	<hr/>
+	</div>
+
+	<script>
+		function myFunction() {
+    		var x = document.getElementById("myForm");
+    		console.log(x);
+    		var text = "";
+    		var i;
+    		for (i = 0; i < x.length ;i++) {
+        		text += x.elements[i].value + "<br>";
+    	}
+    	document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+	<hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Company 2013</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+</body>
+</html>    
