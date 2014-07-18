@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome to HackHi Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS for the 'Heroic Features' Template -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">Start Bootstrap</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="heroic-features.html">Home</a>
+                    </li>
+                    <li><a href="#services">Services</a>
+                    </li>
+                    <li><a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <hr/>
+    <div class = "container">
+        <center><h1>Physical Health Trainer</h1>
+        <h5>Please enter the following information to generate the best physical health plan for you!</h5></center>
+    	<form align="left" id="myForm" class="input-group">
+    		
+    		<div>
+  				<p>First Name:</p>
+  				<input id="first" type="text" placeholder="First Name" required/>
+  				<p style="margin-top:2%">Last Name:</p>
+  				<input id="last" type="text"  placeholder="Last Name" required/>
+  				<p style="margin-top:2%">Age:</p>
+  				<input id="age" type="number" placeholder="Age" min = "15" max="150" step="any" required/>
+  				<p style="margin-top:2%">Height(in inches):</p>
+  				<input id="height" type="number" placeholder="Height" required/>
+  				<p style="margin-top:2%">Weight(in lbs):</p>
+  				<input id="weight" type="number" placeholder="Weight" required/>
+  				<p style="margin-top:2%">Gender:</p>
+  				<select id="gender" required>
+  					<option value="Male">Male</option>
+  					<option value="Female">Female</option>
+  				</select>
+
+  				
+          <button type="button" onclick="calcBMI()">Calculate BMI</button>
+
+          <p>How many hours a week can you commit to exercise?</p>
+          <input type="number" placeholder="hours" required/>
+			</div>
+      <input type="submit" class="btn btn-primary" value="Submit" >
+			<br/>
+
+		</form>
+
+	<hr/>
+	</div>
+  
+<script>
+  function calcBMI() {
+      var height = document.getElementById('height');
+      var weight = document.getElementById('weight');
+
+      var bmi = (weight * 703) / (height * height);
+      return bmi;    
+  }
+  </script>
+	<hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Company 2013</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+</body>
+</html>    
