@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Mental Personal Trainer</title>
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.css" rel="stylesheet">
+
+<!-- Custom CSS for the 'Heroic Features' Template -->
+<link href="css/heroic-features.css" rel="stylesheet">
+
+<!-- Custom CSS for Healthy HI -->
+<link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.php">Start Bootstrap</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#about">About</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+	<div class="container">
+
+		<h1>Mental Health Evaluation Form</h1>
+		<form id="mentalHealthForm" class="input-group" method=get>
+			<p>First Name:</p>
+			<input type="text" id="firstname" placeholder="First name" required />
+			<p>Last Name:</p>
+			<input type="text" id="lastname" placeholder="Last name" required />
+			<p>Age:</p>
+			<input type="number" id="age" min="15" max="200" placeholder="Age" required />
+			<p>On average how many hours of sleep do you get per night?</p>
+			<input type="number" id="sleep" min="0" max="24" step="any"
+				placeholder="Hours of sleep" required />
+			<p>Do you smoke?</p>
+			<select id="smoke"/>
+			<option value=1>Yes</option>
+			<option value=0>No</option>
+			</select>
+			<p>How many drinks do you have per week? (A drink=1.5 fl oz hard liquor/4-5 oz of wine/12 oz of beer)</p>
+            <input type="number" id="drink" min="0" step="any"
+                placeholder="Drinks per week" required />
+			<p>On average how many hours do you exercise per week?</p>
+			<input type="number" id="exercise" min="0" max="168" step="any"
+				placeholder="Hours of exercise" required />
+			<p>On a scale of 1 being minimal stress to 10 being high stress
+				how stressed are you?</p>
+			<input type="number" id="stress" min="1" max="10" step="any"
+				placeholder="Stress level" required />
+			<p>On a scale of 1 being unhappy and 10 being very happy, how
+				happy are you?</p>
+			<input type="number" id="happy" min="1" step="any" max="10"
+				placeholder="Happiness level" required>
+			<p>What are your interests and hobbies?</p>
+			
+			<ul>
+				<li><input id="0C" type="checkbox" name="hobby" value="0">Baking</li>
+				<li><input id="1C" type="checkbox" name="hobby" value="1">Cooking</li>
+				<li><input id="2C" type="checkbox" name="hobby" value="2">Video Games</li>
+				<li><input id="3C" type="checkbox" name="hobby" value="3">Working Out</li>
+				<li><input id="4C" type="checkbox" name="hobby" value="4">Reading</li>
+				<li><input id="5C" type="checkbox" name="hobby" value="5">Biking</li>
+				<li><input id="6C" type="checkbox" name="hobby" value="6">Watching Movies</li>
+				<li><input id="7C" type="checkbox" name="hobby" value="7">Playing an instrument</li>
+				<li><input id="8C" type="checkbox" name="hobby" value="8">Photography</li>
+				<li><input id="9C" type="checkbox" name="hobby" value="9">Knitting</li>
+				<li><input id="10C" type="checkbox" name="hobby" value="10">Painting/Drawing</li>
+				<li><input id="11C" type="checkbox" name="hobby" value="11">Playing sports</li>
+                <li><input id="12C" type="checkbox" name="hobby" value="12">Fishing</li>
+                <li><input id="13C" type="checkbox" name="hobby" value="13">Listening to music</li>
+				<li><input id="14C" type="checkbox" name="hobby" value="14">Geocaching</li>
+				<li><input id="15C" type="checkbox" name="hobby" value="15">Playing board games</li>
+				<li><input id="16C" type="checkbox" name="hobby" value="16">Playing card games</li>
+				<li><input id="17C" type="checkbox" name="hobby" value="17">Scrapbooking</li>
+				<li><input id="18C" type="checkbox" name="hobby" value="18">Running</li>
+				<li><input id="19C" type="checkbox" name="hobby" value="19">Yoga</li>
+				<li><input id="20C" type="checkbox" name="hobby" value="20">Hiking</li>
+                <li><input type="checkbox" name="hobby" value="21">Other</li>
+			</ul>
+
+			<input style="width: 15%" type="submit"
+				class="btn btn-primary pull-left" value="Submit" id=submit onclick="submitForm()"/>
+
+		</form>
+		<!-- /.row -->
+
+		<hr>
+
+		<footer>
+			<div class="row">
+
+				<div class="col-lg-12">
+					<p>Copyright &copy; Company 2013</p>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<!-- /.container -->
+
+	<!-- JavaScript -->
+	<script src="js/mentalhealth.js"></script>
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
