@@ -52,60 +52,94 @@
         <h1>Mental Health Trainer</h1>
         <h5>Please enter the following information to generate the best mental health plan for you!</h5>
 		<hr/>
-    	<form align="left" id="myForm" class="form-horizontal" role="form">
+		
+		<div class="container">
+		<div class="col-sm-offset-2 col-sm-8">
+    	<form align="left" id="mentalHealthForm" method=get class="form-horizontal" role="form">
 		
 		<div class="form-group">
-		<label for="FirstName" class="col-sm-4 control-label">First Name</label>
-			<div class="col-sm-4">
-			<input type="text" class="form-control" id="FirstName" placeholder="First Name" required/>
-			</div>
+		<label for="firstname" class="control-label">First Name</label>
+		<input type="text" class="form-control" id="firstname" placeholder="First Name" required/>
 		</div>
 		
 		<div class="form-group">
-		<label for="LasstName" class="col-sm-4 control-label">Last Name</label>
-			<div class="col-sm-4">
-			<input type="text" class="form-control" id="LastName" placeholder="Last Name" required/>
-			</div>
+		<label for="lastname" class="control-label">Last Name</label>
+		<input type="text" class="form-control" id="lastname" placeholder="Last Name" required/>
 		</div>
 		
 		<div class="form-group">
-		<label for="Age" class="col-sm-4 control-label">Age</label>
-			<div class="col-sm-4">
-			<input type="number" class="form-control" id="Age" placeholder="Age" required/>
-			</div>
-		</div>
-		
-		
-		<div class="form-group">
-		<label for="Height" class="col-sm-4 control-label">Height (inches)</label>
-			<div class="col-sm-4">
-			<input type="number" class="form-control" id="Height" placeholder="Height" required/>
-			</div>
+		<label for="age" class="control-label">Age</label>
+		<input type="number" class="form-control" id="age" placeholder="Age" required/>
 		</div>
 		
 		<div class="form-group">
-		<label for="Weight" class="col-sm-4 control-label">Weight (lbs)</label>
-			<div class="col-sm-4">
-			<input type="number" class="form-control" id="Weight" placeholder="Weight" required/>
-			</div>
+		<label for="sleep" class="control-label">On average how many hours of sleep do you get per night?</label>
+		<input type="number" class="form-control" id="sleep" min="0" max="24" placeholder="Hours of sleep" required/>
 		</div>
 		
 		<div class="form-group">
-		<label for="Gender" class="col-sm-4 control-label">Gender</label>
-			<div class="col-sm-4">
-			<select  class="form-control" id="Gender" required/>
-				<option value="Male">Male</option>
-  				<option value="Female">Female</option>
+		<label for="smoke" class="control-label">Do you smoke?</label>
+			<select  class="form-control" id="smoke" required/>
+				<option value="1">Yes</option>
+  				<option value="0">No</option>
   			</select>
-			</div>
 		</div>
 		
 		<div class="form-group">
-		<label for="Hours" class="col-sm-4 control-label">Hours I can commit to exercise</label>
-			<div class="col-sm-4">
-			<input type="number" class="form-control" id="Hours" placeholder="Hours" required/>
-			</div>
+		<label for="drink" class="control-label">How many drinks do you have per week? (1 drink = 1.5 oz liquor/4-5 oz of wine/12 oz of beer)</label>
+		<input type="number" class="form-control" id="drink" placeholder="Drinks per week" required/>
 		</div>
+		
+		<div class="form-group">
+		<label for="exercise" class="control-label">On average how many hours do you exercise per week?</label>
+		<input type="number" class="form-control" id="exercise" placeholder="Hours of exercise" required/>
+		</div>
+		
+		<div class="form-group">
+		<label for="stress" class="control-label">On a scale of 1 being minimal stress to 10 being high stress how stressed are you?</label>
+		<input type="number" class="form-control" id="stress" min="1" max="10" placeholder="Stress level" required/>
+		</div>
+		
+		<div class="form-group">
+		<label for="happy" class="control-label">On a scale of 1 being unhappy and 10 being very happy, how happy are you?</label>
+		<input type="number" class="form-control" id="happy" min="1" max="10" placeholder="Happiness level" required/>
+		</div>
+		
+		<div class="form-group">
+		<label for="hobby" class="control-label">What are your interests and hobbies? Check all that apply. </label>
+		</div>
+		
+		<div class="form-group">
+				<input class="checkbox-inline" id="0C" type="checkbox" name="hobby" value="0"> Baking
+				<input class="checkbox-inline" id="1C" type="checkbox" name="hobby" value="1"> Cooking
+				<input class="checkbox-inline" id="2C" type="checkbox" name="hobby" value="2"> Video Games
+				<input class="checkbox-inline" id="3C" type="checkbox" name="hobby" value="3"> Working Out
+				<input class="checkbox-inline" id="4C" type="checkbox" name="hobby" value="4"> Reading
+				<input class="checkbox-inline" id="5C" type="checkbox" name="hobby" value="5"> Biking
+		</div>
+		<div class="form-group">
+				<input class="checkbox-inline" id="6C" type="checkbox" name="hobby" value="6"> Watching Movies
+				<input class="checkbox-inline" id="7C" type="checkbox" name="hobby" value="7"> Playing an instrument
+				<input class="checkbox-inline" id="8C" type="checkbox" name="hobby" value="8"> Photography
+				<input class="checkbox-inline" id="9C" type="checkbox" name="hobby" value="9"> Knitting
+				<input class="checkbox-inline" id="10C" type="checkbox" name="hobby" value="10"> Painting/Drawing
+		</div>
+		<div class="form-group">
+				<input class="checkbox-inline" id="11C" type="checkbox" name="hobby" value="11"> Playing sports
+                <input class="checkbox-inline" id="12C" type="checkbox" name="hobby" value="12"> Fishing
+                <input class="checkbox-inline" id="13C" type="checkbox" name="hobby" value="13"> Listening to music
+				<input class="checkbox-inline" id="14C" type="checkbox" name="hobby" value="14"> Geocaching
+				<input class="checkbox-inline" id="15C" type="checkbox" name="hobby" value="15"> Playing board games
+		</div>
+		<div class="form-group">
+				<input class="checkbox-inline" id="16C" type="checkbox" name="hobby" value="16"> Playing card games
+				<input class="checkbox-inline" id="17C" type="checkbox" name="hobby" value="17"> Scrapbooking
+				<input class="checkbox-inline" id="18C" type="checkbox" name="hobby" value="18"> Running
+				<input class="checkbox-inline" id="19C" type="checkbox" name="hobby" value="19"> Yoga
+				<input class="checkbox-inline" id="20C" type="checkbox" name="hobby" value="20"> Hiking
+                <input class="checkbox-inline" type="checkbox" name="hobby" value="21"> Other
+		</div>
+		
 
 		<div class="form-group">
 		<div class="col-sm-offset-4 col-sm-10">
@@ -114,6 +148,8 @@
 		</div>
 
 	</form>
+	</div>
+	</div>
 
 	<hr/>
 	</div>
@@ -136,5 +172,6 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+	<script src="js/mentalhealth.js"></script>
 
 </body>
