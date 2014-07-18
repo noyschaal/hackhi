@@ -3,10 +3,36 @@ body {
 }
 .hero-spacer {
 	margin-top: 50px;
+	background-color: #5c9a1b;
+	color: #ffffff;
 }
 
 .hero-feature {
 	margin-bottom: 30px;/* spaces out the feature boxes once they start to stack responsively */
+}
+
+.navbar-custom {
+    color:#1d5b2d;
+	background-color: #ffffff;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#1d5b2d;
+}
+
+.navbar-custom .navbar-nav > li > a:hover {
+    color: #ffffff;
+    background-color:#1d5b2d;
+}
+
+.navbar-custom .navbar-brand {
+    color:#1d5b2d;
+}
+
+.btn-custom {
+	background-color:#5c9a1b;
+	color: #ffffff;
 }
 
 footer {
