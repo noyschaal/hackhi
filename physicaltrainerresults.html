@@ -16,7 +16,7 @@
     <link href="css/heroic-features.css" rel="stylesheet">
 </head>
 
-<body>
+<body  onload="calories()">
 
     <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
         <div class="container">
@@ -46,41 +46,43 @@
         <!-- /.container -->
     </nav>
 
-    <div class="container" onload="createPlan()">
+    <div class="container">
 
-        <div class="jumbotron hero-spacer">
+        <div class="jumbotron hero-spacer text-center">
             <h1 class="page-header">Your Results</h1>
 			
-			<p><label id="firstname"></label>, your psychological health score is: <label id="sum"></label> / 70 </p>
+	
+			<p>Hello, <label id = "first"></label> <label id = "last"></label>.<br/>	
+			You are a <label id = "age"></label> year old <label id="gender"></label> and you are currently <label id = "height"></label> inches tall.<br/> 
+			You weigh <label id = "weight"></label> lbs, your BMI is <label id="bmi"></label> and your BMR is: <label id = "bmr"></label>.<br/> 
+			Based on your personal information, you need to consume approximately <label id="calories"></label> calories in order to maintain your weight. To begin losing weight, we reccomend you reduce your daily caloric intake by 200-500 calories everyday. 1 pound is roughly equivalent to 3500 calories and knocking off 500 calories everyday for week along with daily physical activity can help you lose up to 1 pound per week. It is also possible to lose more by partaking in heavier exercises.<br/>
+			</p>
+    
 			
-			<h3>Weekly Schedule</h3>
+			<p>Here's what you can do to improve your physical health:</p>
 			
-			<table class="table table-bordered table-condensed">
+			<table class="table table-custom table-bordered">
 			<tr>
-				<th>Days</th>
-				<th>Mon</th>
-				<th>Tues</th>
-				<th>Wed</th>
-				<th>Thurs</th>
-				<th>Fri</th>
-				<th>Sat</th>
-				<th>Sun</th>
+				<td><b>Sunday</b></td>
+				<td><b>Monday</b></td>
+				<td><b>Tuesday</b></td>
+				<td><b>Wednesday</b></td>
+				<td><b>Thursday</b></td>
+				<td><b>Friday</b></td>
+				<td><b>Saturday</b></td>
 			</tr>
 			
 			<tr>
-				<th>Activities</th>
-				<td>Run</td>
-				<td>Swim</td>
-				<td>do things</td>
-				<td>hello</td>
-				<td>yoyoyoy</td>
-				<td>yayaya</td>
-				<td>lalala</td>
+				<td id="Sunday"></td>
+				<td id="Monday"></td>
+				<td id="Tuesday"></td>
+				<td id="Wednesday"></td>
+				<td id="Thursday"></td>
+				<td id="Friday"></td>
+				<td id="Saturday"></td>
 			</tr>
-			
 			</table>
 			
-		<h3>Additional Info</h3>
         </div>
         <hr>
 
@@ -98,6 +100,7 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+	<script src="js/physicalhealth.js"></script>
 
 </body>
 
