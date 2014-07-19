@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome to HackHi Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS for the 'Heroic Features' Template -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+   <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">HealthyHI</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-custom navbar-nav">
+                    <li><a href="about.html">About</a>
+                    </li>
+                    <li><a href="services.html">Services</a>
+                    </li>
+                    <li><a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	
+    <div class = "container">
+	
+	<div class="jumbotron hero-spacer text-center">
+        <h1>Physical Health Trainer</h1>
+        <h5>Please enter the following information to generate the best physical health plan for you!</h5>
+		<hr/>
+    	<form align="left" id="myForm" class="form-horizontal" method="get" action="physicaltrainerresults.html" role="form">
+		
+		<div class="form-group">
+		<label for="first" class="col-sm-4 control-label">First Name</label>
+			<div class="col-sm-4">
+			<input type="text" class="form-control" name="first" id="first" placeholder="First Name" required/>
+			</div>
+		</div>
+		
+		<div class="form-group">
+		<label for="last" class="col-sm-4 control-label">Last Name</label>
+			<div class="col-sm-4">
+			<input type="text" class="form-control" name="last" id="last" placeholder="Last Name" required/>
+			</div>
+		</div>
+		
+		<div class="form-group">
+		<label for="age" class="col-sm-4 control-label">Age</label>
+			<div class="col-sm-4">
+			<input type="number" class="form-control" name="age" id="age" placeholder="Age" required/>
+			</div>
+		</div>
+		
+		
+		<div class="form-group">
+		<label for="height" class="col-sm-4 control-label">Height (inches)</label>
+			<div class="col-sm-4">
+			<input type="number" class="form-control" name="height" id="height" placeholder="Height" required/>
+			</div>
+		</div>
+		
+		<div class="form-group">
+		<label for="weight" class="col-sm-4 control-label">Weight (lbs)</label>
+			<div class="col-sm-4">
+			<input type="number" class="form-control" name="weight" id="weight" placeholder="Weight" required/>
+			</div>
+		</div>
+		
+		<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-10">
+		<small>
+		BMI info:<br/>
+		Underweight = 18.5 or less<br/>
+        Normal Weight = 18.5 to 24.9<br/>
+        Overweight = 25.0 to 29.9<br/>
+        Obesity = 30.0 or greater<br/>
+		</small>
+		</div>
+        </div>
+		
+		<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-10">
+			<button id="calculate" onclick="calcBMI(); return false" type="submit" class="btn btn-default">Calculate BMI</button>
+			<label class="label" id="bmi"> </label>
+		</div>
+		</div>
+		
+		<div class="form-group">
+		<label for="gender" class="col-sm-4 control-label">Gender</label>
+			<div class="col-sm-4">
+			<select  class="form-control" name="gender" id="gender" required/>
+				<option value="Male">Male</option>
+  				<option value="Female">Female</option>
+  			</select>
+			</div>
+		</div>
+		
+		<div class="form-group">
+		<label for="hours" class="col-sm-4 control-label">Hours I can commit to exercise per week</label>
+			<div class="col-sm-4">
+			<input type="number" class="form-control" name="hours" id="hours" placeholder="Hours" required/>
+			</div>
+		</div>
+		
+		<div class="form-group">
+		<label for="activity" class="col-sm-4 control-label">What is your level of activity?</label>
+			<div class="col-sm-4">
+			
+			<div class="radio">
+			  <label>
+				<input type="radio" id="sedentary" name="activity" value="sedentary">
+				Sedentary
+			  </label>
+			</div>
+			
+			<div class="radio">
+			  <label>
+				<input type="radio" id="light" name="activity" value="lightly active">
+				Lightly Active
+			  </label>
+			</div>
+			
+			<div class="radio">
+			  <label>
+				<input type="radio" id="moderate" name="activity" value="moderately active">
+				Moderately Active
+			  </label>
+			</div>
+			
+			<div class="radio">
+			  <label>
+				<input type="radio" id="very" name="activity" value="very active">
+				Very Active
+			  </label>
+			</div>
+			
+			<div class="radio">
+			  <label>
+				<input type="radio" id="extra" name="activity" value="extra active">
+				Extra Active
+			  </label>
+			</div>
+			
+			</div>
+		</div>
+
+		<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-10">
+			<button type="submit" class="btn btn-default" id="save" onclick="return saveInfo()" value="Save">Submit Form</button>
+		</div>
+		</div>
+
+	</form>
+
+	<hr/>
+	</div>
+	</div>
+  
+
+     <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Humana HackHI 2014. Created by Noy Schaal, Joan Lemaster, Eyad Abuimaish, and Robert Cocanougher</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+	<script src="js/physicalhealth.js"></script>
+
+</body>

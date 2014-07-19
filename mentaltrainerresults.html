@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>HealthyHI: Your personal health trainer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS for the 'Heroic Features' Template -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+</head>
+
+<body  onload="createPlan()">
+
+    <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">HealthyHI</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-custom navbar-nav">
+                    <li><a href="about.html">About</a>
+                    </li>
+                    <li><a href="services.html">Services</a>
+                    </li>
+                    <li><a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        <div class="jumbotron hero-spacer text-center">
+            <h1 class="page-header">Your Results</h1>
+			
+			<p><label id="firstname"></label>, your psychological health score is:<p>
+			<h1><label id="sum"></label> / 70 </h1>
+			
+			<p>Here's what you can do to improve your psychological health:</p>
+			
+			<table class="table table-custom table-bordered table-condensed">
+			<tr>
+				<td><b>Sunday</b></td>
+				<td><b>Monday</b></td>
+				<td><b>Tuesday</b></td>
+				<td><b>Wednesday</b></td>
+				<td><b>Thursday</b></td>
+				<td><b>Friday</b></td>
+				<td><b>Saturday</b></td>
+			</tr>
+			
+			<tr>
+				<td id="sunday"></td>
+				<td id="monday"></td>
+				<td id="tuesday"></td>
+				<td id="wednesday"></td>
+				<td id="thursday"></td>
+				<td id="friday"></td>
+				<td id="saturday"></td>
+			</tr>
+			</table>
+			
+			<p>Suggested time per ativity: <label id="time">1 hour</label></p>
+			
+        </div>
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Humana HackHI 2014. Created by Noy Schaal, Joan Lemaster, Eyad Abuimaish, and Robert Cocanougher</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+	<script src="js/mentalhealth.js"></script>
+
+</body>
+
+</html>
