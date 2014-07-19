@@ -1,26 +1,44 @@
-var user={firstname:"",lastname:"", age:0, sleep:0, smoke:0, drink:0, exercise:0, stress:0, happy:0 };
-var hobbies=[];
 
-function submitForm(){
-	user.firstname=document.getElementById('firstname').value;
-	user.lastname=document.getElementById('lastname').value;
-	user.age=document.getElementById('age').value;
-	user.sleep=document.getElementById('sleep').value;
-	user.smoke=document.getElementById('smoke').value;
-	user.drink=document.getElementById('drink').value;
-	user.exercise=document.getElementById('exercise').value;
-	user.stress=document.getElementById('stress').value;
-	user.happy=document.getElementById('happy').value;
-	alert("test");
-	var i;
-	for(i=0; i<20; i++){
-		var num=i.toString();
-		alert(num);
-		var idString=num+"C";
-		if(document.getElementById(idString).checked){
-			hobbies.push(document.getElementById(idString).value);
-			alert(hobbies.toString());
-		}
-	}
-}
-
+// function cal() {
+// var ageSum = 0;
+// if (user.age >= 94) {
+// ageSum = ageSum + 5;
+// } else if (user.age < 94 && user.age >= 78) {
+// ageSum = ageSum + 6;
+// } else if (user.age < 78 && user.age >= 62) {
+// ageSum = ageSum + 7;
+// } else if (user.age < 62 && user.age >= 46) {
+// ageSum = ageSum + 3;
+// } else if (user.age < 46 && user.age >= 30) {
+// ageSum = ageSum + 5;
+// } else if (user.age < 30 && user.age >= 19) {
+// ageSum = ageSum + 10;
+// } else {
+// ageSum = ageSum + 7;
+// }
+//
+// var sleepSum = 0;
+// if (user.sleep >= 19) {
+// sleepSum = sleepSum + 0;
+// } else if (user.sleep < 94 && user.age >= 78) {
+// sleepSum = sleepSum + 6;
+// } else if (user.age < 78 && user.age >= 62) {
+// sleepSum = sleepSum + 7;
+// } else if (user.age < 62 && user.age >= 46) {
+// sleepSum = sleepSum + 3;
+// } else if (user.age < 46 && user.age >= 30) {
+// sleepSum = sleepSum + 5;
+// } else if (user.age < 30 && user.age >= 19) {
+// sleepSum = sleepSum + 10;
+// } else {
+// sleepSum = sleepSum + 7;
+// }
+// var smokeSum = 0;
+// var drinkSum = 0;
+// var exerciseSum = 0;
+// var stressSum = 0;
+// var happySum = 0;
+// var totalSum = ageSum + sleepSum + smokeSum + drinkSum + exerciseSum
+// + stressSum + happySum;
+// return totalSum;
+// }

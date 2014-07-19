@@ -49,34 +49,34 @@
 	<div class="container">
 
 		<h1>Mental Health Evaluation Form</h1>
-		<form id="mentalHealthForm" class="input-group" method=get>
+		<form id="mentalHealthForm" class="input-group" method="get" action="mentaltrainerresults.html">
 			<p>First Name:</p>
-			<input type="text" id="firstname" placeholder="First name" required />
+			<input type="text" name="firstname" id="firstname" placeholder="First name" required />
 			<p>Last Name:</p>
-			<input type="text" id="lastname" placeholder="Last name" required />
+			<input type="text" name="lastname" id="lastname" placeholder="Last name" required />
 			<p>Age:</p>
-			<input type="number" id="age" min="15" max="200" placeholder="Age" required />
+			<input type="number" name="age" id="age" min="15" max="200" placeholder="Age" required />
 			<p>On average how many hours of sleep do you get per night?</p>
-			<input type="number" id="sleep" min="0" max="24" step="any"
+			<input type="number" name="sleep" id="sleep" min="0" max="24" step="any"
 				placeholder="Hours of sleep" required />
 			<p>Do you smoke?</p>
-			<select id="smoke"/>
+			<select name="smoke" id="smoke"/>
 			<option value=1>Yes</option>
 			<option value=0>No</option>
 			</select>
 			<p>How many drinks do you have per week? (A drink=1.5 fl oz hard liquor/4-5 oz of wine/12 oz of beer)</p>
-            <input type="number" id="drink" min="0" step="any"
+            <input name="drink" type="number" id="drink" min="0" step="any"
                 placeholder="Drinks per week" required />
 			<p>On average how many hours do you exercise per week?</p>
-			<input type="number" id="exercise" min="0" max="168" step="any"
+			<input type="number" name="exercise" id="exercise" min="0" max="168" step="any"
 				placeholder="Hours of exercise" required />
 			<p>On a scale of 1 being minimal stress to 10 being high stress
 				how stressed are you?</p>
-			<input type="number" id="stress" min="1" max="10" step="any"
+			<input type="number" id="stress" name="stress" min="1" max="10" step="any"
 				placeholder="Stress level" required />
 			<p>On a scale of 1 being unhappy and 10 being very happy, how
 				happy are you?</p>
-			<input type="number" id="happy" min="1" step="any" max="10"
+			<input type="number" id="happy" name="happy" min="1" step="any" max="10"
 				placeholder="Happiness level" required>
 			<p>What are your interests and hobbies?</p>
 			
@@ -107,6 +107,7 @@
 
 			<input style="width: 15%" type="submit"
 				class="btn btn-primary pull-left" value="Submit" id=submit onclick="submitForm()"/>
+
 
 		</form>
 		<!-- /.row -->
