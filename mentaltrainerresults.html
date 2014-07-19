@@ -16,7 +16,7 @@
     <link href="css/heroic-features.css" rel="stylesheet">
 </head>
 
-<body>
+<body  onload="createPlan()">
 
     <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
         <div class="container">
@@ -46,14 +46,15 @@
         <!-- /.container -->
     </nav>
 
-    <div class="container" onload="createPlan()">
+    <div class="container">
 
-        <div class="jumbotron hero-spacer">
+        <div class="jumbotron hero-spacer text-center">
             <h1 class="page-header">Your Results</h1>
 			
-			<p><label id="firstname"></label>, your psychological health score is: <label id="sum"></label> / 70 </p>
+			<p><label id="firstname"></label>, your psychological health score is:<p>
+			<h1><label id="sum"></label> / 70 </h1>
 			
-			<h3>Weekly Schedule</h3>
+			<p>Here's what you can do to improve your mental health:</p>
 			
 			<table class="table table-bordered table-condensed">
 			<tr>
@@ -80,7 +81,6 @@
 			
 			</table>
 			
-		<h3>Additional Info</h3>
         </div>
         <hr>
 
@@ -98,6 +98,7 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+	<script src="js/mentalhealth.js"></script>
 
 </body>
 

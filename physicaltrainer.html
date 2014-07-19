@@ -92,8 +92,20 @@
 		
 		<div class="form-group">
 		<div class="col-sm-offset-4 col-sm-10">
+		<small>
+		BMI info:<br/>
+		Underweight = 18.5 or less<br/>
+        Normal Weight = 18.5 to 24.9<br/>
+        Overweight = 25.0 to 29.9<br/>
+        Obesity = 30.0 or greater<br/>
+		</small>
+		</div>
+        </div>
+		
+		<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-10">
 			<button id="calculate" onclick="calcBMI(); return false" type="submit" class="btn btn-default">Calculate BMI</button>
-			<span id="bmi"> </span>
+			<label class="label" id="bmi"> </label>
 		</div>
 		</div>
 		
@@ -114,6 +126,48 @@
 			</div>
 		</div>
 		
+		<div class="form-group">
+		<label for="Hours" class="col-sm-4 control-label">What is your level of activity?</label>
+			<div class="col-sm-4">
+			
+			<div class="radio">
+			  <label>
+				<input type="radio" id="sedentary" name="activity" value="sedentary">
+				Sedentary
+			  </label>
+			</div>
+			
+			<div class="radio">
+			  <label>
+				<input type="radio" id="light" name="activity" value="lightly active">
+				Lightly Active
+			  </label>
+			</div>
+			
+			<div class="radio">
+			  <label>
+				<input type="radio" id="moderate" name="activity" value="moderately active">
+				Moderately Active
+			  </label>
+			</div>
+			
+			<div class="radio">
+			  <label>
+				<input type="radio" id="very" name="activity" value="very active">
+				Very Active
+			  </label>
+			</div>
+			
+			<div class="radio">
+			  <label>
+				<input type="radio" id="extra" name="activity" value="extra active">
+				Extra Active
+			  </label>
+			</div>
+			
+			</div>
+		</div>
+
 		<div class="form-group">
 		<div class="col-sm-offset-4 col-sm-10">
 			<button type="submit" class="btn btn-default" id="save" onclick="return saveInfo()" value="Save">Submit Form</button>
