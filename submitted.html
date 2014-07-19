@@ -7,7 +7,6 @@
     <meta name="author" content="">
 
     <title>Welcome to HackHi Project</title>
-
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -15,7 +14,7 @@
     <link href="css/heroic-features.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 </head>
-<body onload="getPersonFromQuerystring()">
+<body onload="calories()">
 <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -46,11 +45,25 @@
     <hr/>
 
     <div>
-      <label id="first"></label><br/>
-      <label id="last"></label>
+      Hello, <label id = "first"></label> <label id = "last"></label>.<br/>
+      You are a <label id = "age"></label> year old <label id="gender"></label> and you are currently
+      <label id = "height"></label> inches tall.<br/> You weigh
+      <label id = "weight"></label> lbs and your BMR is:
+      <label id = "bmr"></label>.<br/> Hours:
+      <label id="hours"></label>.<br/> Activity level:
+      <label id="activity"></label><br/> Based on your personal information, you need to consume approximately
+      <label id="calories"></label> calories in order to maintain your weight. To begin losing weight, we reccomend you 
+      reduce your daily caloric intake by 200-500 calories everyday. 1 pound is roughly equivalent to 3500 calories and knocking off 500 calories everyday
+      for week along with daily physical activity can help you lose up to 1 pound per week. It is also possible to lose more by partaking in heavier exercises.
+      BMI:
+      <label id="bmi"></label> <br/>
+      Monday:
+      <label id ="Monday"></label>.
+      Test:
+      <label id ="test"></label>.
     </div>
     <div>
-        <script>document.write(calcBMR(15,150,70,"Male","Sedentary"))</script>
+        
     </div>
     <script src = "submitted.js"></script>
 </body>
