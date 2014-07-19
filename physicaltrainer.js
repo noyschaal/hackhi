@@ -1,7 +1,13 @@
 
 var person = {
+	// first:"",
+	// last:"",
+	// age:"",
 	height:"",
-	weight:"",	
+	weight:"",
+	// gender:"",
+	// hours:"",
+	// activity:""	
 };
 
 function saveInfo() {
@@ -11,23 +17,30 @@ function saveInfo() {
 		return false;
 	}
 
-	// person.firstName = document.getElementById('first').value;
-	// person.lastName = document.getElementById('last').value;
+	// person.first = document.getElementById('first').value;
+	// person.last = document.getElementById('last').value;
 	// person.age = document.getElementById('age').value;
-	// person.tall = document.getElementById('height').value;
+	// person.height = document.getElementById('height').value;
 	// person.weight = document.getElementById('weight').value;
 	// person.gender = document.getElementById('gender').value;
+	// person.hours = document.getElementById('hours').value;
+	// person.activity = document.getElementsByName('activity').value;
+	alert("data has been saved");
 	return true;
 
 }
-
 
 function calcBMI() {
       person.height = document.getElementById('height').value;
       person.weight = document.getElementById('weight').value;
       var bmi = (person.weight * 703) / (person.height * person.height);
-
+      alert("Test");
       document.getElementById('bmi').innerText="Your bmi is " + Math.round(bmi*10)/10;
      return false;
 }
+
+
+
+
+
       

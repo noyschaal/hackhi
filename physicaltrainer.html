@@ -78,6 +78,14 @@
           
           <p>How many hours a week can you commit to exercise?</p>
           <input id="hours" name="hours" type="number" placeholder="hours" required/>
+
+          <p>What is your level of activity?</p>
+          <input type="radio" id="sedentary" name="activity" value="sedentary">Sedentary<br/>
+          <input type="radio" id="light" name="activity" value="lightly active">Lightly Active<br/>
+          <input type="radio" id="moderate" name="activity" value="moderately active">Moderately Active<br/>
+          <input type="radio" id="very" name="activity" value="very active">Very Active<br/>
+          <input type="radio" id="extra" name="activity" value="extra active">Extra Active<br/>
+
 			</div>
       <br/>
       <input type="submit" id="save" onclick="return saveInfo()" value="Save"/>
