@@ -16,7 +16,7 @@
     <link href="css/heroic-features.css" rel="stylesheet">
 </head>
 
-<body>
+<body  onload="calories()">
 
     <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
         <div class="container">
@@ -48,55 +48,40 @@
 
     <div class="container">
 
-        <div class="jumbotron hero-spacer">
-            <h1 class="page-header">Contact</h1>
+        <div class="jumbotron hero-spacer text-center">
+            <h1 class="page-header">Your Results</h1>
 			
-			 <div class="row text-center">
+	
+			<p>Hello, <label id = "first"></label> <label id = "last"></label>.<br/>	
+			You are a <label id = "age"></label> year old <label id="gender"></label> and you are currently <label id = "height"></label> inches tall.<br/> 
+			You weigh <label id = "weight"></label> lbs, your BMI is <label id="bmi"></label> and your BMR is: <label id = "bmr"></label>.<br/> 
+			Based on your personal information, you need to consume approximately <label id="calories"></label> calories in order to maintain your weight. To begin losing weight, we reccomend you reduce your daily caloric intake by 200-500 calories everyday. 1 pound is roughly equivalent to 3500 calories and knocking off 500 calories everyday for week along with daily physical activity can help you lose up to 1 pound per week. It is also possible to lose more by partaking in heavier exercises.<br/>
+			</p>
+    
 			
-
-			<div class="col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img src="img/noy.png" class="img-circle">
-					<div class="caption">
-                        <h4>Noy Schaal</h5>
-                        <h6>schaal@umich.edu</h6>
-                    </div>
-                </div>
-            </div>
-
-			<div class="col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img src="img/joan.jpg" class="img-circle">
-                    <div class="caption">
-                        <h4>Joan Lemaster</h4>
-                        <h6>lemaster.96@buckeyemail.osu.edu</h6>
-
-                    </div>
-                </div>
-            </div>
+			<p>Here's what you can do to improve your physical health:</p>
 			
-			<div class="col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img src="img/eyad.png" class="img-circle">
-                    <div class="caption">
-                        <h4>Eyad Abuimaish</h4>
-                        <h6>eabuimaish@mail.usf.edu</h6>
-                    </div>
-                </div>
-            </div>
+			<table class="table table-custom table-bordered">
+			<tr>
+				<td><b>Sunday</b></td>
+				<td><b>Monday</b></td>
+				<td><b>Tuesday</b></td>
+				<td><b>Wednesday</b></td>
+				<td><b>Thursday</b></td>
+				<td><b>Friday</b></td>
+				<td><b>Saturday</b></td>
+			</tr>
 			
-			<div class="col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img src="img/rob.jpg" class="img-circle">
-                    <div class="caption">
-                        <h4>Robert Cocanougher</h4>
-                        <h6>rlcoca01@louisville.edu</h6>
-                    </div>
-                </div>
-            </div>
-
-
-			</div>
+			<tr>
+				<td id="Sunday"></td>
+				<td id="Monday"></td>
+				<td id="Tuesday"></td>
+				<td id="Wednesday"></td>
+				<td id="Thursday"></td>
+				<td id="Friday"></td>
+				<td id="Saturday"></td>
+			</tr>
+			</table>
 			
         </div>
         <hr>
@@ -115,6 +100,7 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+	<script src="js/physicalhealth.js"></script>
 
 </body>
 

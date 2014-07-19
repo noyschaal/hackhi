@@ -16,7 +16,7 @@
     <link href="css/heroic-features.css" rel="stylesheet">
 </head>
 
-<body>
+<body  onload="createPlan()">
 
     <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
         <div class="container">
@@ -48,55 +48,37 @@
 
     <div class="container">
 
-        <div class="jumbotron hero-spacer">
-            <h1 class="page-header">Contact</h1>
+        <div class="jumbotron hero-spacer text-center">
+            <h1 class="page-header">Your Results</h1>
 			
-			 <div class="row text-center">
+			<p><label id="firstname"></label>, your psychological health score is:<p>
+			<h1><label id="sum"></label> / 70 </h1>
 			
-
-			<div class="col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img src="img/noy.png" class="img-circle">
-					<div class="caption">
-                        <h4>Noy Schaal</h5>
-                        <h6>schaal@umich.edu</h6>
-                    </div>
-                </div>
-            </div>
-
-			<div class="col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img src="img/joan.jpg" class="img-circle">
-                    <div class="caption">
-                        <h4>Joan Lemaster</h4>
-                        <h6>lemaster.96@buckeyemail.osu.edu</h6>
-
-                    </div>
-                </div>
-            </div>
+			<p>Here's what you can do to improve your psychological health:</p>
 			
-			<div class="col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img src="img/eyad.png" class="img-circle">
-                    <div class="caption">
-                        <h4>Eyad Abuimaish</h4>
-                        <h6>eabuimaish@mail.usf.edu</h6>
-                    </div>
-                </div>
-            </div>
+			<table class="table table-custom table-bordered table-condensed">
+			<tr>
+				<td><b>Sunday</b></td>
+				<td><b>Monday</b></td>
+				<td><b>Tuesday</b></td>
+				<td><b>Wednesday</b></td>
+				<td><b>Thursday</b></td>
+				<td><b>Friday</b></td>
+				<td><b>Saturday</b></td>
+			</tr>
 			
-			<div class="col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img src="img/rob.jpg" class="img-circle">
-                    <div class="caption">
-                        <h4>Robert Cocanougher</h4>
-                        <h6>rlcoca01@louisville.edu</h6>
-                    </div>
-                </div>
-            </div>
-
-
-			</div>
+			<tr>
+				<td id="sunday"></td>
+				<td id="monday"></td>
+				<td id="tuesday"></td>
+				<td id="wednesday"></td>
+				<td id="thursday"></td>
+				<td id="friday"></td>
+				<td id="saturday"></td>
+			</tr>
+			</table>
+			
+			<p>Suggested time per ativity: <label id="time">1 hour</label></p>
 			
         </div>
         <hr>
@@ -115,6 +97,7 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+	<script src="js/mentalhealth.js"></script>
 
 </body>
 
